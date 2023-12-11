@@ -1,0 +1,30 @@
+<div class="container mt-4">
+    <h2>Tabla de Solicitudes</h2>
+    <button class="btn btn-primary mb-3" (click)="agregarSolicitud()">Agregar Solicitud</button>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Título del Proyecto</th>
+                <th>Importe Económico</th>
+                <th>Fecha de Inicio</th>
+                <th>Fecha de Fin</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let solicitud of solicitudes">
+                <td>{{ solicitud.titulo }}</td>
+                <td>{{ solicitud.importe | currency }}</td>
+                <td>{{ solicitud.fechaInicio | date }}</td>
+                <td>{{ solicitud.fechaFin | date }}</td>
+                <td>{{ solicitud.estado }}</td>
+                <td>
+                    <button class="btn btn-info btn-sm" (click)="verSolicitud()">Ver</button>
+                    <button class="btn btn-warning btn-sm" (click)="editarSolicitud()">Editar</button>
+                    <button class="btn btn-danger btn-sm" (click)="eliminarSolicitud()">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card mt-4 mb-4">
+                <div class="card-body text-center">
+                    <span class="titulo">REGISTRO DE USUARIOS</span>
+                    <form class="mt-3 formulario">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre de usuario">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Ingrese contraseña">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Ingrese nuevamente la contraseña">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Correo electrónico">
+                        </div>
+                        <div class="mb-3">
+                            <select formControlName="tipoUsuario" class="form-control form-control-lg">
+                                <option value="" disabled selected>Escoja el tipo de usuario</option>
+                                <option value="organismo">Organismo</option>
+                                <option value="investigador">Investigador</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <button class="btn btn-secondary btn-lg float-middle">Registrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
