@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand">Admin</a>
+        <a class="navbar-brand">Administrador</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,6 @@
                 <li class="nav-item">
                     <a class="nav-link" (click)="showList_grupo_inv()">Grupo de Investigacion</a>
                 </li>
-                <!-- Fin de elementos de la segunda sección -->
             </ul>
         </div>
     </div>
@@ -31,6 +30,4 @@
     <app-list-convocatorias *ngIf="list_convocatoria"></app-list-convocatorias>
     <app-list-organismos *ngIf="list_organismo"></app-list-organismos>
     <app-list-grupo-inv *ngIf="list_grupo_inv"></app-list-grupo-inv>
-    
-    
 </main>
