@@ -18,5 +18,5 @@ export const routes: Routes = [
     { path: 'grupos-inv', component: GruposInvestigacionComponent },
     { path: 'organismos', component: OrganismosComponent },
     { path: 'solicitud-inv', component: SolicitudInvComponent },
-    { path: '', redirectTo: 'login', pathMatch: 'full' }
+    { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];
