@@ -8,6 +8,8 @@ import { ConvocatoriasComponent } from './admin/components/admin-dashboard/convo
 import { GruposInvestigacionComponent } from './admin/components/admin-dashboard/grupos-investigacion/grupos-investigacion.component';
 import { OrganismosComponent } from './admin/components/admin-dashboard/organismos/organismos.component';
 import { SolicitudInvComponent } from './investigador/components/investigador-view/solicitud-inv/solicitud-inv.component';
+import { OrganismoViewComponent } from './organismos/components/organismo-view/organismo-view.component';
+import { ConvtOrgComponent } from './organismos/components/organismo-view/convt-org/convt-org.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginViewComponent },
@@ -18,5 +20,7 @@ export const routes: Routes = [
     { path: 'grupos-inv', component: GruposInvestigacionComponent },
     { path: 'organismos', component: OrganismosComponent },
     { path: 'solicitud-inv', component: SolicitudInvComponent },
+    { path: 'organismo-view', component: OrganismoViewComponent },
+    { path: 'convocatorias-org', component: ConvtOrgComponent },
     { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];

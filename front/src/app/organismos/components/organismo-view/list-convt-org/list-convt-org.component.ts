@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
+
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-list-soltd-inv',
+  selector: 'app-list-convt-org',
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './list-soltd-inv.component.html',
-  styleUrl: './list-soltd-inv.component.css'
+  templateUrl: './list-convt-org.component.html',
+  styleUrl: './list-convt-org.component.css'
 })
-export class ListSoltdInvComponent {
+export class ListConvtOrgComponent {
 
 }
 
