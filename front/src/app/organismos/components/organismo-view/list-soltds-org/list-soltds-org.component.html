@@ -1,6 +1,6 @@
 <div class="container mt-5">
     <div class="row">
-        <div class="col-lg-10 offset-lg-1">
+        <div class="col-lg-11 offset-lg-1">
             <div class="card">
                 <div class="card-body">
                     <div class="text-center">
@@ -9,48 +9,32 @@
                     <table class="table table-striped mt-4">
                         <thead>
                             <tr>
-                                <th scope="col">Id</th>
                                 <th scope="col">Titulo Proyecto</th>
                                 <th scope="col">Importe Economicó</th>
                                 <th scope="col">Fecha Inicio</th>
                                 <th scope="col">Fecha Inicio</th>
                                 <th scope="col">Nombre Grupo</th>
-                                <th scope="col">Horas Semana</th>                               
-                                <th scope="col">Convocatoria</th>                               
+                                <th scope="col">Horas Semana</th>
+                                <th scope="col">Convocatoria</th>
                                 <th scope="col">Acción</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Proyecto A</td>
-                                <td>$1000</td>
-                                <td>2023-01-01</td>
-                                <td>2023-02-01</td>
-                                <td>Grupo A</td>
-                                <td>20</td>
-                                <td>Convocatoria 1</td>
-                                <td>
-                                    <i class="fa-regular fa-pen-to-square text-primary"></i>
-                                    <i class="fa-regular fa-trash-can text-danger"></i>
-                                </td>
+                            <tr *ngFor="let solicitud of solicitudes" [ngClass]="solicitud.estado">
+                              <td>{{ solicitud.titulo }}</td>
+                              <td>{{ solicitud.importe }}</td>
+                              <td>{{ solicitud.fechaInicio }}</td>
+                              <td>{{ solicitud.fechaFin }}</td>
+                              <td>{{ solicitud.nombreGrupo }}</td>
+                              <td>{{ solicitud.horasSemana }}</td>
+                              <td>{{ solicitud.convocatoria }}</td>
+                              <td [class.aprobada]="solicitud.estado === 'aprobada'" [class.desaprobada]="solicitud.estado === 'desaprobada'">
+                                <i class="fas fa-check text-success" (click)="toggleAprobada(solicitud)"></i>
+                                <i class="fas fa-times text-danger" (click)="toggleDesaprobada(solicitud)"></i>
+                                <i class="fas fa-eye text-primary"></i>
+                            </td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Proyecto B</td>
-                                <td>$1500</td>
-                                <td>2023-03-01</td>
-                                <td>2023-04-01</td>
-                                <td>Líder B</td>
-                                <td>25</td>
-                                <td>Convocatoria 2</td>
-                                <td>
-                                    <p><i class="fa-regular fa-pen-to-square text-primary"></i>Aprovar</p> 
-                                    <p><i class="fa-regular fa-trash-can text-danger" routerLink="/solicitudes-org" routerLinkActive="active" ariaCurrentWhenActive="page"></i>Ver Mas</p> 
-                                    <p><i class="fa-regular fa-trash-can text-danger"></i>Rechazar</p> 
-                                </td>
-                            </tr>
-                        </tbody>
+                          </tbody>
                     </table>
                 </div>
             </div>

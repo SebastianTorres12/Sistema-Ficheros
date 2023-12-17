@@ -1,4 +1,15 @@
-.fa-regular {
+.fas {
     cursor: pointer;
     margin-left: 7px;
+}
+
+.aprobada {
+    background-color: #d4edda;
+    /* Puedes cambiar esto al color que desees */
+}
+
+/* Agrega estilos para las filas desaprobadas */
+.desaprobada {
+    background-color: #f8d7da;
+    /* Puedes cambiar esto al color que desees */
 }
