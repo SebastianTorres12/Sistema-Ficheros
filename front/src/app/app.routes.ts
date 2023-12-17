@@ -11,6 +11,7 @@ import { SolicitudInvComponent } from './investigador/components/investigador-vi
 import { OrganismoViewComponent } from './organismos/components/organismo-view/organismo-view.component';
 import { ConvtOrgComponent } from './organismos/components/organismo-view/convt-org/convt-org.component';
 import { SoltdsOrgComponent } from './organismos/components/organismo-view/soltds-org/soltds-org.component';
+import { InvestigadoresComponent } from './admin/components/admin-dashboard/investigadores/investigadores.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginViewComponent },
@@ -24,5 +25,6 @@ export const routes: Routes = [
     { path: 'organismo-view', component: OrganismoViewComponent },
     { path: 'convocatorias-org', component: ConvtOrgComponent },
     { path: 'solicitudes-org', component: SoltdsOrgComponent },
+    { path: 'investigadores', component: InvestigadoresComponent },
     { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];

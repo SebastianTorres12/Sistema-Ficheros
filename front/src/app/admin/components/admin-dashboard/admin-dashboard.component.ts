@@ -7,12 +7,12 @@ import { ListUsuariosComponent } from './list-usuarios/list-usuarios.component';
 import { ListOrganismosComponent } from './list-organismos/list-organismos.component';
 import { ListGrupoInvComponent } from './list-grupo-inv/list-grupo-inv.component';
 import { ListSolicitudesComponent } from './list-solicitudes/list-solicitudes.component';
-
+import { ListInvestigadoresComponent } from './list-investigadores/list-investigadores.component';
 
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,
-  imports: [CommonModule, ListConvocatoriasComponent, ListUsuariosComponent, ListOrganismosComponent, ListGrupoInvComponent, ListSolicitudesComponent],
+  imports: [CommonModule, ListConvocatoriasComponent, ListUsuariosComponent, ListOrganismosComponent, ListGrupoInvComponent, ListSolicitudesComponent, ListInvestigadoresComponent],
   templateUrl: './admin-dashboard.component.html',
   styleUrl: './admin-dashboard.component.css'
 })
@@ -24,7 +24,7 @@ export class AdminDashboardComponent implements OnInit {
   list_convocatoria: boolean = false;
   list_grupo_inv: boolean = false;
   list_solicitudes: boolean = false;
-
+  list_investigadores: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -36,6 +36,7 @@ export class AdminDashboardComponent implements OnInit {
     this.list_convocatoria = false;
     this.list_grupo_inv = false;
     this.list_solicitudes = false;
+    this.list_investigadores = false;
   }
 
   showList_usuarios() {
@@ -61,6 +62,11 @@ export class AdminDashboardComponent implements OnInit {
   showList_solicitudes() {
     this.setOff();
     this.list_solicitudes = true;
+  }
+
+  showList_investigadores() {
+    this.setOff();
+    this.list_investigadores = true;
   }
 
 }

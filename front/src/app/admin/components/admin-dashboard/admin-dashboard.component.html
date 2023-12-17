@@ -17,6 +17,9 @@
                     <a class="nav-link" (click)="showList_convocatoria()">Convocatoria</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" (click)="showList_investigadores()">Investigadores</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" (click)="showList_grupo_inv()">Grupo de Investigacion</a>
                 </li>
             </ul>
@@ -30,4 +33,5 @@
     <app-list-convocatorias *ngIf="list_convocatoria"></app-list-convocatorias>
     <app-list-organismos *ngIf="list_organismo"></app-list-organismos>
     <app-list-grupo-inv *ngIf="list_grupo_inv"></app-list-grupo-inv>
+    <app-list-investigadores *ngIf="list_investigadores"></app-list-investigadores>
 </main>
