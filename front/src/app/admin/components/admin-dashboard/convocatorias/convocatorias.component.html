@@ -1,33 +1,52 @@
-<div class="container">
-    <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-            <div class="card mt-4 mb-4">
-                <div class="card-body text-center">
-                    <span class="titulo">REGISTRO DE CONVOCATORIAS</span>
-                    <form class="mt-3 formulario">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Programa">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Direccion web">
-                        </div>
-                        <div class="mb-3 d-flex align-items-center">
-                            <div class="input-group-text">Fecha límite</div>
-                            <input type="date" id="fechaLimite" class="form-control me-2">
-                        </div>                                                
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Correo electrónico">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Número BOE/DOGV">
-                        </div>
-                        <div class="mb-2">
-                            <button class="btn btn-secondary btn-lg float-end">Registrar</button>
-                            <button routerLink="/admin-view" routerLinkActive="active" ariaCurrentWhenActive="page" class="btn btn-secondary btn-lg float-start">Volver</button>
-                        </div>
-                    </form>
+<div class="container mt-3">
+    <br>
+    <div class="card p-3" style="max-width: 600px; margin: 0 auto;">
+        <h3 class="text-center fw-bold mt-4 mb-4">REGISTRO DE CONVOCATORIAS</h3>
+        <form class="mt-3">
+            <div class="mb-2">
+                <label for="programa" class="form-label"><strong>Programa:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" id="programa" class="form-control" placeholder="Ingrese el programa">
                 </div>
             </div>
-        </div>
+
+            <div class="mb-2">
+                <label for="direccionWeb" class="form-label"><strong>Dirección web:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="text" id="direccionWeb" class="form-control" placeholder="Ingrese la dirección web">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="fechaLimite" class="form-label"><strong>Fecha límite:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                    <input type="date" id="fechaLimite" class="form-control me-2">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="correoElectronico" class="form-label"><strong>Correo electrónico:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="email" id="correoElectronico" class="form-control" placeholder="Ingrese su correo electrónico">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="numeroBOE" class="form-label"><strong>Número BOE/DOGV:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+                    <input type="text" id="numeroBOE" class="form-control" placeholder="Ingrese el número BOE/DOGV">
+                </div>
+            </div>
+
+            <div class="mt-3 d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary btn-lg float-end"><i class="fas fa-check"></i> Registrar</button>
+                <button type="button" class="btn btn-secondary btn-lg float-start" routerLink="/admin-view" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-arrow-left"></i> Volver</button>
+            </div>
+        </form>
     </div>
 </div>
