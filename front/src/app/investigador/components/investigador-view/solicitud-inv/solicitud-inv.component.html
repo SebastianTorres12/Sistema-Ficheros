@@ -1,1 +1,61 @@
-<p>solicitud-inv works!</p>
+<div class="container mt-3">
+    <br>
+    <div class="card p-3" style="max-width: 600px; margin: 0 auto;">
+        <h3 class="text-center fw-bold mt-4 mb-4">REGISTRO DE SOLICITUD</h3>
+        <!-- Formulario para crear una nueva tarea -->
+        <form>
+            <div class="mb-2">
+                <label for="nombre" class="form-label"><strong>Titulo Proyecto:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Titulo Proyecto">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="direccion" class="form-label"><strong>Importe Economico:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="number" class="form-control" placeholder="Importe Economico">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="direccion" class="form-label"><strong>Fecha Inicio:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="date" class="form-control" placeholder="Dirección">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="direccion" class="form-label"><strong>Fecha Fin</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="date" class="form-control" placeholder="Dirección">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="password" class="form-label"><strong>Nombre Grupo:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="text" class="form-control" placeholder="Población">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="confirmPassword" class="form-label"><strong>Horas por Semana:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="number" class="form-control" placeholder="Código Postal">
+                </div>
+            </div>
+
+            <div class="mt-4 d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Registrar</button>
+                <button type="button" class="btn btn-secondary" routerLink="/investigador-view" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-arrow-left"></i> Volver</button>
+            </div>
+        </form>
+    </div>
+</div>
