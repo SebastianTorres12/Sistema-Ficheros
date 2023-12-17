@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { GpoInvInvComponent } from './gpo-inv-inv.component';
 
-describe('GpoInvInvComponent', () => {
-  let component: GpoInvInvComponent;
-  let fixture: ComponentFixture<GpoInvInvComponent>;
+import { ListInvesInvComponent } from './list-inves-inv.component';
+
+describe('ListInvesInvComponent', () => {
+  let component: ListInvesInvComponent;
+  let fixture: ComponentFixture<ListInvesInvComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GpoInvInvComponent]
+      imports: [ListInvesInvComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GpoInvInvComponent);
+    fixture = TestBed.createComponent(ListInvesInvComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

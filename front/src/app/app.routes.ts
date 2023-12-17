@@ -14,6 +14,8 @@ import { SolicitudesComponent } from './admin/components/admin-dashboard/solicit
 
 //investigador
 import { SolicitudInvComponent } from './investigador/components/investigador-view/solicitud-inv/solicitud-inv.component';
+import { GpoInvInvComponent } from './investigador/components/investigador-view/gpo-inv-inv/gpo-inv-inv.component';
+import { InvesInvComponent } from './investigador/components/investigador-view/inves-inv/inves-inv.component';
 
 //organismo
 import { ConvtOrgComponent } from './organismos/components/organismo-view/convt-org/convt-org.component';
@@ -33,5 +35,7 @@ export const routes: Routes = [
     { path: 'solicitudes-org', component: SoltdsOrgComponent },
     { path: 'investigadores', component: InvestigadoresComponent },
     { path: 'solicitudes', component: SolicitudesComponent },
+    { path: 'gpo-inv-inv', component: GpoInvInvComponent },
+    { path: 'inves-inv', component: InvesInvComponent },
     { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];

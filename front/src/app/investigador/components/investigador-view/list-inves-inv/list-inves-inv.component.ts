@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import {RouterOutlet, RouterLink, RouterLinkActive} from '@angular/router';
 
+
 @Component({
-  selector: 'app-gpo-inv-inv',
+  selector: 'app-list-inves-inv',
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './gpo-inv-inv.component.html',
-  styleUrl: './gpo-inv-inv.component.css'
+  templateUrl: './list-inves-inv.component.html',
+  styleUrl: './list-inves-inv.component.css'
 })
-export class GpoInvInvComponent {
+export class ListInvesInvComponent {
 
 }

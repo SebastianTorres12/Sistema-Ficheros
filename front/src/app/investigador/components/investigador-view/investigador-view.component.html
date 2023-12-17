@@ -14,7 +14,10 @@
                     <a class="nav-link" (click)="showListSolicitud()">Solicitudes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" (click)="showGrupoInvestigacion()">Grupo de Investigacion</a>
+                    <a class="nav-link" (click)="showListInvestigador()">Investigadores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="showListGrupoInvestigacion()">Grupo de Investigacion</a>
                 </li>
                 <!-- Fin de elementos de la segunda sección -->
             </ul>
@@ -26,4 +29,6 @@
     <!-- Contenido de la aplicación -->
     <app-convocatoria-inv *ngIf="convocatoriaInv"></app-convocatoria-inv>
     <app-list-soltd-inv *ngIf="listSolicitudInv"></app-list-soltd-inv>
+    <app-list-inves-inv *ngIf="listInvestigador"></app-list-inves-inv>
+    <app-list-gpo-inv-inv *ngIf="listGrupo"></app-list-gpo-inv-inv>
 </main>
