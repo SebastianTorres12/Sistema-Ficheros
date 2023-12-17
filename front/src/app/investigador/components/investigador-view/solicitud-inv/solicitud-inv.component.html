@@ -5,18 +5,18 @@
         <!-- Formulario para crear una nueva tarea -->
         <form>
             <div class="mb-2">
-                <label for="nombre" class="form-label"><strong>Titulo Proyecto:</strong></label>
+                <label for="nombre" class="form-label"><strong>Título del Proyecto:</strong></label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                    <input type="text" class="form-control" placeholder="Titulo Proyecto">
+                    <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+                    <input type="text" class="form-control" placeholder="Titulo del Proyecto">
                 </div>
             </div>
 
             <div class="mb-2">
-                <label for="direccion" class="form-label"><strong>Importe Economico:</strong></label>
+                <label for="direccion" class="form-label"><strong>Importe Económico:</strong></label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                    <input type="number" class="form-control" placeholder="Importe Economico">
+                    <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                    <input type="text" class="form-control" placeholder="Importe Economico">
                 </div>
             </div>
 
@@ -24,44 +24,49 @@
                 <div class="row">
                     <div class="col">
                         <label for="fechaInicio" class="form-label"><strong>Fecha Inicio:</strong></label>
-                        <input type="date" class="form-control" id="fechaInicio" placeholder="Fecha Inicio">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                            <input type="date" class="form-control" id="fechaInicio" placeholder="Fecha Inicio">
+                        </div>
                     </div>
                     <div class="col">
                         <label for="fechaFin" class="form-label"><strong>Fecha Fin:</strong></label>
-                        <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                            <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
+                        </div>
                     </div>
                 </div>
             </div>
 
-
             <div class="mb-2">
                 <label for="password" class="form-label"><strong>Nombre Grupo:</strong></label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                    <input type="text" class="form-control" placeholder="Población">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Nombre del Grupo">
                 </div>
             </div>
 
             <div class="mb-2">
                 <label for="confirmPassword" class="form-label"><strong>Horas por Semana:</strong></label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                    <input type="number" class="form-control" placeholder="Código Postal">
+                    <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                    <input type="number" class="form-control" placeholder="Horas por Semana">
                 </div>
             </div>
 
             <div class="mb-2">
                 <label for="tipoUsuario" class="form-label"><strong>Convocatoria:</strong></label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+                    <span class="input-group-text"><i class="fas fa-clipboard"></i></span>
                     <select id="tipoUsuario" class="form-control">
-                        <option value="" disabled selected>Escoja la convocatoria:</option>
-                        <option value="convocatoria 1">Convocatoria 1</option>
-                        <option value="convocatoria 2">Convocatoria 2</option>
+                        <option value="" disabled selected>Seleccione un opcion</option>
+                        <option value="Convocatoria 1">Convocatoria 1</option>
+                        <option value="Convocatoria 2">Convocatoria 2</option>
                     </select>
                 </div>
             </div>
-
+           
             <div class="mt-4 d-flex justify-content-between">
                 <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Registrar</button>
                 <button type="button" class="btn btn-secondary" routerLink="/investigador-view" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-arrow-left"></i> Volver</button>
