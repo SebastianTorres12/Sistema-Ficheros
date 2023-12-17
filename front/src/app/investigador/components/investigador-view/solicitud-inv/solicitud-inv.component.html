@@ -21,20 +21,18 @@
             </div>
 
             <div class="mb-2">
-                <label for="direccion" class="form-label"><strong>Fecha Inicio:</strong></label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                    <input type="date" class="form-control" placeholder="Dirección">
+                <div class="row">
+                    <div class="col">
+                        <label for="fechaInicio" class="form-label"><strong>Fecha Inicio:</strong></label>
+                        <input type="date" class="form-control" id="fechaInicio" placeholder="Fecha Inicio">
+                    </div>
+                    <div class="col">
+                        <label for="fechaFin" class="form-label"><strong>Fecha Fin:</strong></label>
+                        <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
+                    </div>
                 </div>
             </div>
 
-            <div class="mb-2">
-                <label for="direccion" class="form-label"><strong>Fecha Fin</strong></label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                    <input type="date" class="form-control" placeholder="Dirección">
-                </div>
-            </div>
 
             <div class="mb-2">
                 <label for="password" class="form-label"><strong>Nombre Grupo:</strong></label>
@@ -49,6 +47,18 @@
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-lock"></i></span>
                     <input type="number" class="form-control" placeholder="Código Postal">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="tipoUsuario" class="form-label"><strong>Convocatoria:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+                    <select id="tipoUsuario" class="form-control">
+                        <option value="" disabled selected>Escoja la convocatoria:</option>
+                        <option value="convocatoria 1">Convocatoria 1</option>
+                        <option value="convocatoria 2">Convocatoria 2</option>
+                    </select>
                 </div>
             </div>
 
