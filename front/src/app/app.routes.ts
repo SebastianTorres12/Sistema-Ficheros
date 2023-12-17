@@ -16,5 +16,5 @@ export const routes: Routes = [
     { path: 'convocatorias', component: ConvocatoriasComponent },
     { path: 'grupos-inv', component: GruposInvestigacionComponent },
     { path: 'organismos', component: OrganismosComponent },
-    { path: '', redirectTo: 'admin', pathMatch: 'full' }
+    { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
