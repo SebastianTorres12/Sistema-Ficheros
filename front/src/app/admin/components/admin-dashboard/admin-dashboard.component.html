@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" (click)="showList_usuarios()">Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="showList_organismos()">Organismos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="showList_convocatoria()">Convocatoria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="showList_grupo_inv()">Grupo de Investigacion</a>
+                </li>
+                <!-- Fin de elementos de la segunda sección -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- Contenido de la aplicación -->
+    <app-list-usuarios *ngIf="list_usuarios"></app-list-usuarios>
+    <app-list-convocatorias *ngIf="list_convocatoria"></app-list-convocatorias>
+    <app-list-organismos *ngIf="list_organismo"></app-list-organismos>
+    <app-list-grupo-inv *ngIf="list_grupo_inv"></app-list-grupo-inv>
+    
+    
+</main>
