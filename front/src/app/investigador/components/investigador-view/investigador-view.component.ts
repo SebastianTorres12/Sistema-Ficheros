@@ -1,20 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ConvocatoriaInvComponent } from './convocatoria-inv/convocatoria-inv.component';
-import { SolicitudInvComponent } from './solicitud-inv/solicitud-inv.component';
-import { GInvesInvComponent } from './g-inves-inv/g-inves-inv.component';
+import { ListSoltdInvComponent } from './list-soltd-inv/list-soltd-inv.component';
 
 @Component({
   selector: 'app-investigador-view',
   standalone: true,
-  imports: [CommonModule, ConvocatoriaInvComponent, SolicitudInvComponent, GInvesInvComponent],
+  imports: [CommonModule, ConvocatoriaInvComponent, ListSoltdInvComponent],
   templateUrl: './investigador-view.component.html',
   styleUrl: './investigador-view.component.css'
 })
 export class InvestigadorViewComponent implements OnInit {
 
   convocatoriaInv: boolean = false;
-  solicitudInv: boolean = false;
+  listSolicitudInv: boolean = false;
   grupoInvestInv: boolean = false;
 
   constructor () {}
@@ -25,7 +24,7 @@ export class InvestigadorViewComponent implements OnInit {
 
   setOff() {
     this.convocatoriaInv = false;
-    this.solicitudInv = false;
+    this.listSolicitudInv = false;
     this.grupoInvestInv = false;
   }
 
@@ -34,9 +33,9 @@ export class InvestigadorViewComponent implements OnInit {
     this.convocatoriaInv = true;
   }
 
-  showSolicitud(){
+  showListSolicitud(){
     this.setOff();
-    this.solicitudInv = true;
+    this.listSolicitudInv = true;
   }
 
   showGrupoInvestigacion(){

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GInvesInvComponent } from './g-inves-inv.component';
+import { SolicitudInvComponent } from './solicitud-inv.component';
 
-describe('GInvesInvComponent', () => {
-  let component: GInvesInvComponent;
-  let fixture: ComponentFixture<GInvesInvComponent>;
+describe('SolicitudInvComponent', () => {
+  let component: SolicitudInvComponent;
+  let fixture: ComponentFixture<SolicitudInvComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GInvesInvComponent]
+      imports: [SolicitudInvComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GInvesInvComponent);
+    fixture = TestBed.createComponent(SolicitudInvComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

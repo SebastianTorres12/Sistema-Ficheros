@@ -11,7 +11,7 @@
                     <a class="nav-link" (click)="showConvocatoria()">Convocatoria</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" (click)="showSolicitud()">Solicitudes</a>
+                    <a class="nav-link" (click)="showListSolicitud()">Solicitudes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" (click)="showGrupoInvestigacion()">Grupo de Investigacion</a>
@@ -25,6 +25,5 @@
 <main>
     <!-- Contenido de la aplicación -->
     <app-convocatoria-inv *ngIf="convocatoriaInv"></app-convocatoria-inv>
-    <app-solicitud-inv *ngIf="solicitudInv"></app-solicitud-inv>
-    <app-g-inves-inv *ngIf="grupoInvestInv"></app-g-inves-inv>
+    <app-list-soltd-inv *ngIf="listSolicitudInv"></app-list-soltd-inv>
 </main>

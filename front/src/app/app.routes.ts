@@ -7,6 +7,7 @@ import { UsuariosComponent } from './admin/components/admin-dashboard/usuarios/u
 import { ConvocatoriasComponent } from './admin/components/admin-dashboard/convocatorias/convocatorias.component';
 import { GruposInvestigacionComponent } from './admin/components/admin-dashboard/grupos-investigacion/grupos-investigacion.component';
 import { OrganismosComponent } from './admin/components/admin-dashboard/organismos/organismos.component';
+import { SolicitudInvComponent } from './investigador/components/investigador-view/solicitud-inv/solicitud-inv.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginViewComponent },
@@ -16,5 +17,6 @@ export const routes: Routes = [
     { path: 'convocatorias', component: ConvocatoriasComponent },
     { path: 'grupos-inv', component: GruposInvestigacionComponent },
     { path: 'organismos', component: OrganismosComponent },
+    { path: 'solicitid-inv', component: SolicitudInvComponent },
     { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];
