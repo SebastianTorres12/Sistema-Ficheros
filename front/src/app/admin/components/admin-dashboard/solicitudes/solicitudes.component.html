@@ -8,7 +8,7 @@
                 <label for="nombre" class="form-label"><strong>Título del Proyecto:</strong></label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
-                    <input type="text" class="form-control" placeholder="Nombre de organismo">
+                    <input type="text" class="form-control" placeholder="Titulo del Proyecto">
                 </div>
             </div>
 
@@ -16,23 +16,54 @@
                 <label for="direccion" class="form-label"><strong>Importe Económico:</strong></label>
                 <div class="input-group">
                     <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
-                    <input type="text" class="form-control" placeholder="Dirección">
+                    <input type="text" class="form-control" placeholder="Importe Economico">
                 </div>
             </div>
 
             <div class="mb-2">
-                <label for="fechaLimite" class="form-label"><strong>Fecha Inicio:</strong></label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-                    <input type="date" id="fechaLimite" class="form-control me-2">
+                <div class="row">
+                    <div class="col">
+                        <label for="fechaInicio" class="form-label"><strong>Fecha Inicio:</strong></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                            <input type="date" class="form-control" id="fechaInicio" placeholder="Fecha Inicio">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="fechaFin" class="form-label"><strong>Fecha Fin:</strong></label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                            <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Fin">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="mb-2">
-                <label for="fechaLimite" class="form-label"><strong>Fecha Fin:</strong></label>
+                <label for="password" class="form-label"><strong>Nombre Grupo:</strong></label>
                 <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-                    <input type="date" id="fechaLimite" class="form-control me-2">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="text" class="form-control" placeholder="Nombre del Grupo">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="confirmPassword" class="form-label"><strong>Horas por Semana:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="number" class="form-control" placeholder="Horas por Semana">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="tipoUsuario" class="form-label"><strong>Convocatoria:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+                    <select id="tipoUsuario" class="form-control">
+                        <option value="" disabled selected>Seleccione un opcion</option>
+                        <option value="Convocatoria 1">Convocatoria 1</option>
+                        <option value="Convocatoria 2">Convocatoria 2</option>
+                    </select>
                 </div>
             </div>
            
