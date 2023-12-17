@@ -1,1 +1,51 @@
-<p>list-solicitudes works!</p>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <span class="titulo"><strong>LISTADO DE SOLICITUDES</strong></span>
+                        <button class="btn btn-success float-end" routerLink="/solicitudes" routerLinkActive="active"
+                            ariaCurrentWhenActive="page">NUEVA</button>
+                    </div>
+                    <table class="table table-striped mt-4">
+                        <thead>
+                            <tr>
+                                <th scope="col">Título</th>
+                                <th scope="col">Importe Económico</th>
+                                <th scope="col">Fecha Inicio</th>
+                                <th scope="col">Fecha Fin</th>
+                                <th scope="col">Grupo Investigación</th>
+                                <th scope="col">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Proyecto A</td>
+                                <td>$50,000</td>
+                                <td>2023-01-15</td>
+                                <td>2023-12-31</td>
+                                <td>Biología Molecular</td>
+                                <td>
+                                    <i class="fa-regular fa-pen-to-square text-primary"></i>
+                                    <i class="fa-regular fa-trash-can text-danger"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Proyecto B</td>
+                                <td>$35,000</td>
+                                <td>2023-02-01</td>
+                                <td>2023-11-30</td>
+                                <td>Física Teórica</td>
+                                <td>
+                                    <i class="fa-regular fa-pen-to-square text-primary"></i>
+                                    <i class="fa-regular fa-trash-can text-danger"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

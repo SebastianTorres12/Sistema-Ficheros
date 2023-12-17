@@ -1,1 +1,45 @@
-<p>solicitudes works!</p>
+<div class="container mt-3">
+    <br>
+    <div class="card p-3" style="max-width: 600px; margin: 0 auto;">
+        <h3 class="text-center fw-bold mt-4 mb-4">REGISTRO DE SOLICITUD</h3>
+        <!-- Formulario para crear una nueva tarea -->
+        <form>
+            <div class="mb-2">
+                <label for="nombre" class="form-label"><strong>Título del Proyecto:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-briefcase"></i></span>
+                    <input type="text" class="form-control" placeholder="Nombre de organismo">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="direccion" class="form-label"><strong>Importe Económico:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                    <input type="text" class="form-control" placeholder="Dirección">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="fechaLimite" class="form-label"><strong>Fecha Inicio:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                    <input type="date" id="fechaLimite" class="form-control me-2">
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label for="fechaLimite" class="form-label"><strong>Fecha Fin:</strong></label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                    <input type="date" id="fechaLimite" class="form-control me-2">
+                </div>
+            </div>
+           
+            <div class="mt-4 d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Registrar</button>
+                <button type="button" class="btn btn-secondary" routerLink="/admin-view" routerLinkActive="active" ariaCurrentWhenActive="page"><i class="fas fa-arrow-left"></i> Volver</button>
+            </div>
+        </form>
+    </div>
+</div>

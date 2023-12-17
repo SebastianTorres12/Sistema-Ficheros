@@ -9,6 +9,7 @@ import { ListGrupoInvComponent } from './list-grupo-inv/list-grupo-inv.component
 import { ListSolicitudesComponent } from './list-solicitudes/list-solicitudes.component';
 import { ListInvestigadoresComponent } from './list-investigadores/list-investigadores.component';
 
+
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,

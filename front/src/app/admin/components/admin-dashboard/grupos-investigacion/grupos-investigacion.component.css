@@ -1,34 +1,7 @@
-/* Estilos para el formulario */
-.card{
-    background-color: #fff;
-}
-
-.titulo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-}
-
-.formulario input,
-.formulario select {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-    background-color: #FFFFFF;
-}
-
-.formulario button {
-    background-color: #007bff;
+.fas {
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.formulario button:hover {
-    background-color: #0056b3;
-    font-size: 22px;
-}
+.input-group-text {
+    background-color: #1F7A8C;
+}	
