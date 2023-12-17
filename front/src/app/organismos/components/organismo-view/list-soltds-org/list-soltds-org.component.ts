@@ -14,6 +14,7 @@ export class ListSoltdsOrgComponent {
     {
       titulo: 'Proyecto A',
       importe: '$1000',
+      investigador: 'Sebastian',
       fechaInicio: '2023-01-01',
       fechaFin: '2023-02-01',
       nombreGrupo: 'Grupo A',
@@ -23,7 +24,8 @@ export class ListSoltdsOrgComponent {
     },
     {
       titulo: 'Proyecto B',
-      importe: '$1500',
+      importe: '$1000',
+      investigador: 'David',
       fechaInicio: '2023-03-01',
       fechaFin: '2023-04-01',
       nombreGrupo: 'Líder B',
