@@ -10,6 +10,7 @@ import { OrganismosComponent } from './admin/components/admin-dashboard/organism
 import { SolicitudInvComponent } from './investigador/components/investigador-view/solicitud-inv/solicitud-inv.component';
 import { OrganismoViewComponent } from './organismos/components/organismo-view/organismo-view.component';
 import { ConvtOrgComponent } from './organismos/components/organismo-view/convt-org/convt-org.component';
+import { SoltdsOrgComponent } from './organismos/components/organismo-view/soltds-org/soltds-org.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginViewComponent },
@@ -22,5 +23,6 @@ export const routes: Routes = [
     { path: 'solicitud-inv', component: SolicitudInvComponent },
     { path: 'organismo-view', component: OrganismoViewComponent },
     { path: 'convocatorias-org', component: ConvtOrgComponent },
+    { path: 'solicitudes-org', component: SoltdsOrgComponent },
     { path: '**', redirectTo: 'login', pathMatch: 'full' }
 ];
