@@ -28,6 +28,7 @@ export class GenericFormComponent implements OnInit {
   ngOnInit(): void {
     this.formOrganismo = this.formBuilder.group({
       nombre: ['', Validators.required],
+      password: ['', Validators.required],
       direccion: ['', Validators.required],
       poblacion: ['', Validators.required],
       codigo_postal: ['', Validators.required],

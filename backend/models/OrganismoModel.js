@@ -2,11 +2,30 @@ import mongoose from "mongoose";
 
 const organismoSchema = new mongoose.Schema(
   {
-    nombre: String,
-    direccion: String,
-    poblacion: Number,
-    codigo_postal: Number,
-    telefono: Number,
+    nombre: {
+      type: String,
+      required: [true, "Complete este campo"]
+    },
+    password: {
+      type: String,
+      required: [true, "Complete este campo"]
+    },
+    direccion: {
+      type: String,
+      required: [true, "Complete este campo"]
+    },
+    poblacion: {
+      type: String,
+      required: [true, "Complete este campo"]
+    },
+    codigo_postal: {
+      type: Number,
+      required: [true, "Complete este campo"]
+    },
+    telefono: {
+      type: Number,
+      required: [true, "Complete este campo"]
+    },
     convocatorias: [
       {
         type: mongoose.Schema.Types.ObjectId,

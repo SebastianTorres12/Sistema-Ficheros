@@ -1,4 +1,5 @@
 // form-investigador.component.ts
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,7 +9,7 @@ import { Investigador } from '../../models/investigador.model';
 @Component({
   selector: 'form-investigador',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule,RouterLink, RouterLinkActive],
+  imports: [FormsModule, ReactiveFormsModule,RouterLink, RouterLinkActive,CommonModule],
   templateUrl: './form-investigador.component.html',
   styleUrls: ['./form-investigador.component.css']
 })
@@ -27,13 +28,27 @@ export class FormInvestigadorComponent implements OnInit {
   ngOnInit(): void {
     this.formInvestigador = this.formBuilder.group({
       nombre: ['', Validators.required],
-      responsable: [false, Validators.required]
+      responsable: [false, Validators.required],
+      password: [null] 
     });
 
     if (this.modelInvestigador !== undefined) {
       this.formInvestigador.patchValue(this.modelInvestigador);
     }
+
+    // Observar cambios en el checkbox "responsable"
+    this.formInvestigador.get('responsable').valueChanges.subscribe((value: boolean) => {
+      // Limpiar y deshabilitar el campo de contraseña si no es responsable
+      if (!value) {
+        this.formInvestigador.get('password').setValue(null);
+        this.formInvestigador.get('password').disable();
+      } else {
+        // Habilitar el campo de contraseña si es responsable
+        this.formInvestigador.get('password').enable();
+      }
+    });
   }
+  
 
   onSubmit(): void {
     this.submitValues.emit(this.formInvestigador.value);

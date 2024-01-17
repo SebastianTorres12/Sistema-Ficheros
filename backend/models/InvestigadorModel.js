@@ -6,6 +6,10 @@ const investigadorSchema = new mongoose.Schema(
       type: String,
       required: [true, "Complete este campo"]
     },
+    password: {
+      type: String,
+      default: null,
+    },
     responsable: {
       type: Boolean,
       required: [true, "Complete este campo"]
