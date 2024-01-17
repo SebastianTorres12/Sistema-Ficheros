@@ -9,7 +9,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CrudConvocatoriaService } from '../../services/crudConvocatoria.service';
 import { CrudOrganismoService } from '../../services/crudOrganismo.service';
 import { Organismo } from '../../models/organismo.model';
-import { Convocatoria } from '../../models/convocatoria.model';
+
 
 @Component({
   selector: 'app-create-convocatoria',
