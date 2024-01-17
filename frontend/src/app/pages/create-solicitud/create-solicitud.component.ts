@@ -72,7 +72,7 @@ export class CreateSolicitudComponent {
           if (convocatoria) {
             convocatoria.solicitudes.push(solicitudCreada._id);
   
-            this.crudSolicitudService.updateSolicitud(convocatoriaId, convocatoria).subscribe({
+            this.crudConvocatoriaService.updateConvocatoria(convocatoriaId, convocatoria).subscribe({
               next: () => {
                 this.alertifyService.success('Solicitud Creada');
                 this.router.navigateByUrl('/showSolicitud');
@@ -82,7 +82,7 @@ export class CreateSolicitudComponent {
               }
             });
           } else {
-            this.alertifyService.error('Solicitud no encontrado');
+            this.alertifyService.error('Convocatoria no encontrada');
           }
         } else {
           this.alertifyService.error('Error al obtener el ID de la solicitud');
