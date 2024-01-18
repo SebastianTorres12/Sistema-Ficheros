@@ -20,23 +20,20 @@
                     <input formControlName="nombre" type="text" class="form-control">
                 </div>
             </div>
-          <div class="row mb-3">
-    <label class="col-sm-2 col-form-label">Participantes</label>
-    <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">Participantes</label>
-        <div class="col-sm-10">
-            <select formControlName="participantes" class="form-control selectpicker" multiple data-live-search="true">
-                <option *ngFor="let investigador of getNoResponsableInvestigadores()" [value]="investigador._id">
-                    {{ investigador.nombre }}
-                </option>
-            </select>
-        </div>
-    </div>
-    
-</div>
-
-            
-            
+            <div class="row mb-3">
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Participantes</label>
+                    <div class="col-sm-10">
+                        <select formControlName="participantes" class="form-control selectpicker" multiple
+                            data-live-search="true">
+                            <option *ngFor="let investigador of getNoResponsableInvestigadores()"
+                                [value]="investigador._id">
+                                {{ investigador.nombre }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="btn-group float-end" role="group">
                 <button [disabled]="!formGrupoInvestigacion.valid" type="submit" class="btn btn-primary">
                     Crear Grupo de Investigación

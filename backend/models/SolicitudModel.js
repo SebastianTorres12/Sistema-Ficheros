@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+
 const solicitudSchema = new mongoose.Schema(
   {
     
@@ -36,8 +37,7 @@ const solicitudSchema = new mongoose.Schema(
         investigador_id: {
           type: mongoose.Schema.Types.ObjectId,
           ref: "Investigador" // Referencia a la colección Investigador
-        },
-        horas_semana: Number
+        }
       }
     ]
   },

@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { GrupoInvestigacion } from '../../models/grupo-investigacion.model';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { Investigador } from '../../models/investigador.model';
 import { CrudInvestigadorService } from '../../services/crudInvestigador.service';
