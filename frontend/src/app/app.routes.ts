@@ -33,10 +33,15 @@ import { EditAreaComponent } from './pages/edit-area/edit-area.component';
 
 //RUTA PRINCIPAL
 import { PrincipalComponent } from './pages/principal/principal.component';
+//RUTA LOGIN 
+import { LoginComponent } from './pages/login/login.component';
+
 
 export const routes: Routes = [
+    //Login
+    { path: '', component: LoginComponent },
     //Regreso al main
-    { path: '', component: PrincipalComponent },
+    //{ path: '', component: PrincipalComponent },
     //CRUD ORGANISMO
     { path: 'show', component: ShowComponent },
     { path: 'create', component: CreateComponent },

@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { Area } from '../../models/area.model';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { Departamento } from '../../models/departamento.model';
 import { CrudDepartamentoService } from '../../services/crudDepartamento.service';
