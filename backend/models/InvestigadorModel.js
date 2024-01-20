@@ -13,6 +13,10 @@ const investigadorSchema = new mongoose.Schema(
     responsable: {
       type: Boolean,
       required: [true, "Complete este campo"]
+    },
+    token: {
+      type: String,
+      default: null,
     }
   },
   {

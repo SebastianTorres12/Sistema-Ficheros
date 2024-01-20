@@ -31,8 +31,13 @@ const organismoSchema = new mongoose.Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: "Convocatoria" // Referencia a la colección Convocatoria
       }
-    ]
+    ],
+    token: {
+      type: String,
+      default: null,
+    }
   },
+  
   {
     timestamps: true,
     versionKey: false,

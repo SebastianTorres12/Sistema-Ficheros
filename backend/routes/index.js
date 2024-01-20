@@ -17,4 +17,5 @@ router.use("/grupos-investigacion", grupoInvestigacionRoutes);
 router.use("/departamentos", departamentoRoutes); 
 router.use("/areas", areaRoutes); 
 
+
 export default router;

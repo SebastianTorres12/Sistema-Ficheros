@@ -11,10 +11,10 @@ app.use(express.json())//uso de middleware (Intermediario entre peticiones y lo 
 app.use(urlencoded({extended:true}))//Middleware para formularios metodo POST
 app.use("/api", router);//Middleware Para usar el router
 
-
+/*
 app.get("/", (req, res) => {
     res.send("Hola mundo");
-})
+})*/
 //Llamado a variables de entorno
 const PORT = process.env.PORT;
 const MONGO_URI = process.env.MONGO_URI;
