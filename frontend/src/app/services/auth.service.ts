@@ -13,6 +13,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   login(nombre: string, password: string, role: string): Observable<any> {
+    
     const body = { nombre, password };
     const loginUrl = `${this.apiUrl}/${role}/login`;
 

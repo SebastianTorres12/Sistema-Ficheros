@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { CrudInvestigadorService } from '../../services/crudInvestigador.service';
-import { CrudOrganismoService } from '../../services/crudOrganismo.service';
+
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -18,7 +18,7 @@ export class LoginComponent {
 
   nombre: string = '';
   password: string = '';
-  role: string = 'investigadores'; // Por defecto, podrías establecer el valor según tu lógica
+  role: string = 'investigadores'; 
 
   constructor(
     private authService: AuthService,
