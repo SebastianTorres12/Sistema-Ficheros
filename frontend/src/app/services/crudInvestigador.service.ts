@@ -31,6 +31,15 @@ export class CrudInvestigadorService {
       catchError(this.handleError)
     );
   }
+  
+  getInvestigadorBynombre(nombre: string): Observable<Investigador> {
+    return this.httpClient.get(`${this.REST_API}/nombre/${nombre}`, { headers: this.httpHeaders }).pipe(
+      map((res: any) => {
+        return res || {};
+      }),
+      catchError(this.handleError)
+    );
+  }
 
   createInvestigador(data: Investigador): Observable<Investigador> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');

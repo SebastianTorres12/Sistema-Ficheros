@@ -25,6 +25,15 @@ export class CrudOrganismoService {
     );
   }
 
+  getOrganismoBynombre(nombre: string): Observable<Organismo> {
+    return this.httpClient.get(`${this.REST_API}/nombre/${nombre}`, { headers: this.httpHeaders }).pipe(
+      map((res: any) => {
+        return res || {};
+      }),
+      catchError(this.handleError)
+    );
+  }
+
   createOrganismo(data: Organismo): Observable<Organismo> {
     return this.httpClient.post<Organismo>(this.REST_API, data, { headers: this.httpHeaders }).pipe(
       catchError(this.handleError)

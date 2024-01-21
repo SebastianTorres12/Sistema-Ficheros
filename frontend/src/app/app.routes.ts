@@ -41,7 +41,7 @@ export const routes: Routes = [
     //Login
     { path: '', component: LoginComponent },
     //Regreso al main
-    //{ path: '', component: PrincipalComponent },
+    { path: 'principal', component: PrincipalComponent },
     //CRUD ORGANISMO
     { path: 'show', component: ShowComponent },
     { path: 'create', component: CreateComponent },
