@@ -32,6 +32,8 @@ export class LoginComponent {
           this.router.navigate(['/principal']);
         } else if (this.role === 'organismos') {
           this.router.navigate(['/principal']);
+        } else if (this.role === 'super-admin') {
+          this.router.navigate(['/principal']);
         } else {
           console.error('Rol desconocido');
         }

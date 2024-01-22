@@ -5,8 +5,8 @@ import { connectDB } from './config/db.js';
 import router from './routes/index.js';
 const app = express();
 
-dotenv.config()
-app.use(cors())
+dotenv.config();
+app.use(cors());
 app.use(express.json())//uso de middleware (Intermediario entre peticiones y lo que se ejecuta) se defina antes para alterar a las rutas por debajo de el 
 app.use(urlencoded({extended:true}))//Middleware para formularios metodo POST
 app.use("/api", router);//Middleware Para usar el router
