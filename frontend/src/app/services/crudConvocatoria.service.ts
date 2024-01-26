@@ -33,6 +33,7 @@ export class CrudConvocatoriaService {
     );
   }
 
+
   createConvocatoria(data: Convocatoria): Observable<Convocatoria> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.httpClient.post<Convocatoria>(this.REST_API, data, { headers }).pipe(

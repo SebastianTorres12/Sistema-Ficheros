@@ -35,7 +35,8 @@ import { EditAreaComponent } from './pages/edit-area/edit-area.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 //RUTA LOGIN 
 import { LoginComponent } from './pages/login/login.component';
-
+//RUTA PARA DASHBOARD ORGANISMOS
+import { DashboardOrganismoComponent } from './pages/dashboard-organismo/dashboard-organismo.component';
 
 export const routes: Routes = [
     //Login
@@ -76,6 +77,8 @@ export const routes: Routes = [
     { path: 'createArea', component: CreateAreaComponent },
     { path: 'updateArea/:id', component:     EditAreaComponent },
     
+    //DASHBOARD ORGANISMOS
+    { path: 'dash-organismo', component: DashboardOrganismoComponent },
 
     { path: '**', redirectTo: 'show' }
 ];

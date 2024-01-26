@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Organismo } from '../models/organismo.model';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { Observable, throwError, forkJoin } from 'rxjs';
+import { catchError, map,mergeMap } from 'rxjs/operators';
 
+import { Convocatoria } from '../models/convocatoria.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -24,6 +25,22 @@ export class CrudOrganismoService {
       })
     );
   }
+
+  getConvocatoriasByOrganismo(organismoId: any): Observable<Convocatoria[]> {
+    const url = `${this.REST_API}/${organismoId}/convocatorias`;
+    return this.httpClient.get<string[]>(url, { headers: this.httpHeaders }).pipe(
+      catchError(this.handleError),
+      mergeMap((convocatoriaIds: string[]) => {
+        // Mapea cada ID de convocatoria a una solicitud de obtener convocatoria por ID
+        const requests = convocatoriaIds.map(id =>
+          this.httpClient.get<Convocatoria>(`http://localhost:8000/api/convocatorias/${id}`, { headers: this.httpHeaders })
+        );
+        // Combina todas las solicitudes en una sola observable
+        return forkJoin(requests);
+      })
+    );
+  }
+  
 
 
   createOrganismo(data: Organismo): Observable<Organismo> {

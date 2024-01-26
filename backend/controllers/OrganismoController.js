@@ -99,8 +99,29 @@ export const loginOrganismo = async (req, res) => {
     }
 
     console.log('Organismo actualizado en la base de datos:', updatedOrganismo);
-    res.status(200).json({ token });
+    res.status(200).json({ token,organismoId: organismo._id });
   } catch (error) {
     res.status(500).json({ message: error.message });
+  }
+};
+
+export const getConvocatoriasByOrganismo = async (req, res) => {
+  try {
+    const organismoId = req.params.organismoId;
+
+    // Utiliza OrganismoModel.findById para obtener el organismo por ID
+    const organismo = await OrganismoModel.findById(organismoId);
+
+    if (!organismo) {
+      return res.status(404).json({ message: 'Organismo no encontrado' });
+    }
+
+    // Accede directamente al campo convocatorias del organismo
+    const convocatorias = organismo.convocatorias;
+
+    res.status(200).json(convocatorias);
+  } catch (error) {
+    console.error('Error al obtener convocatorias por organismo:', error);
+    res.status(500).json({ message: 'Error interno del servidor' });
   }
 };

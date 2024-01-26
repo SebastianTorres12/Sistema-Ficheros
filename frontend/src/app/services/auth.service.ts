@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,8 @@ import { catchError, map } from 'rxjs/operators';
 export class AuthService {
   private apiUrl: string = 'http://localhost:8000/api';
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
+
+  private user: any = null;
 
   constructor(private http: HttpClient) {}
 
@@ -18,9 +20,25 @@ export class AuthService {
     const loginUrl = `${this.apiUrl}/${role}/login`;
 
     return this.http.post<any>(loginUrl, body).pipe(
+      tap(user => {
+        console.log('User:', user); // Agrega esta línea para imprimir en la consola
+        this.user = user;
+      }),
       catchError(this.handleError)
     );
   }
+
+    // Método para obtener el token y el ID del organismo
+    getTokenAndOrganismoId(): { token: string, id: string } {
+      // Ajusta esto según la estructura real de tu usuario y la lógica de autenticación
+      const result = {
+        token: this.user?.token || '',
+        id: this.user?.organismoId || ''
+      };
+      console.log(result); // Añade este console.log para verificar el valor
+      return result;
+    }
+    
 
   private handleError(error: HttpErrorResponse) {
     let errorMsg: string = '';
