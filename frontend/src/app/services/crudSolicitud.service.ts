@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, throwError,forkJoin  } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { Solicitud } from '../models/solicitud.model';
 
@@ -22,6 +22,7 @@ export class CrudSolicitudService {
     );
   }
 
+
   getSolicitud(id: any): Observable<Solicitud> {
     return this.httpClient.get(`${this.REST_API}/${id}`, { headers: this.httpHeaders }).pipe(
       map((res: any) => {
@@ -30,6 +31,11 @@ export class CrudSolicitudService {
       catchError(this.handleError)
     );
   }
+  getSolicitudesByIds(ids: string[]): Observable<Solicitud[]> {
+    const observables: Observable<Solicitud>[] = ids.map(id => this.getSolicitud(id));
+    return forkJoin(observables);
+  }
+
 
   createSolicitud(data: Solicitud): Observable<Solicitud> {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');

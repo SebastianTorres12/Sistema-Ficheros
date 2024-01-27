@@ -11,6 +11,7 @@ export class AuthService {
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 
   private user: any = null;
+  private readonly ORGANISMO_ID_KEY = 'organismoId';
 
   constructor(private http: HttpClient) {}
 
@@ -23,6 +24,10 @@ export class AuthService {
       tap(user => {
         console.log('User:', user); // Agrega esta línea para imprimir en la consola
         this.user = user;
+
+        if (user?.organismoId) {
+          localStorage.setItem(this.ORGANISMO_ID_KEY, user.organismoId);
+        }
       }),
       catchError(this.handleError)
     );
@@ -30,10 +35,11 @@ export class AuthService {
 
     // Método para obtener el token y el ID del organismo
     getTokenAndOrganismoId(): { token: string, id: string } {
+      const organismoId = localStorage.getItem(this.ORGANISMO_ID_KEY);
       // Ajusta esto según la estructura real de tu usuario y la lógica de autenticación
       const result = {
         token: this.user?.token || '',
-        id: this.user?.organismoId || ''
+        id: organismoId || ''
       };
       console.log(result); // Añade este console.log para verificar el valor
       return result;

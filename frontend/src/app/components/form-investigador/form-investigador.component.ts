@@ -29,7 +29,7 @@ export class FormInvestigadorComponent implements OnInit {
     this.formInvestigador = this.formBuilder.group({
       nombre: ['', Validators.required],
       responsable: [false, Validators.required],
-      password: [null] 
+      password: ""
     });
 
     if (this.modelInvestigador !== undefined) {
