@@ -40,7 +40,7 @@
             <td>
               <ul>
                 <li *ngFor="let participante of solicitud.participantes">
-                  {{ getInvestigadorById(participante.investigador_id)?.nombre }} 
+                  {{ getInvestigadorById(participante)?.nombre }} 
                 </li>
               </ul>
             </td>

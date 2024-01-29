@@ -83,7 +83,7 @@ export class CreateSolicitudComponent {
     const { convocatoriaId, participantes, ...solicitud } = this.formSolicitud.value;
     const participantesData = participantes.map((investigadorId: string) => {
       return {
-        investigador_id: investigadorId,
+        _id: investigadorId,
       };
     });
 

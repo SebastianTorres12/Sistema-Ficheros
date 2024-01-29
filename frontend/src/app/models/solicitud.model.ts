@@ -7,10 +7,7 @@ export interface Solicitud {
     fecha_inicioProyecto: Date;
     fecha_finProyecto: Date;
     estado: boolean;
-    participantes: {
-      investigador_id: string;
-      horas_semana: number;
-    }[];
+    participantes: string[];
     createdAt: Date;
     updatedAt: Date;
   }

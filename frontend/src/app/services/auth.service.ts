@@ -12,7 +12,7 @@ export class AuthService {
 
   private user: any = null;
   private readonly ORGANISMO_ID_KEY = 'organismoId';
-
+  private readonly INVESTIGADOR_ID_KEY = 'investigadorId';
   constructor(private http: HttpClient) {}
 
   login(nombre: string, password: string, role: string): Observable<any> {
@@ -22,11 +22,13 @@ export class AuthService {
 
     return this.http.post<any>(loginUrl, body).pipe(
       tap(user => {
-        console.log('User:', user); // Agrega esta línea para imprimir en la consola
+        
         this.user = user;
-
+        console.log('User:', user); // Agrega esta línea para imprimir en la consola
         if (user?.organismoId) {
           localStorage.setItem(this.ORGANISMO_ID_KEY, user.organismoId);
+        }else if(user?.investigadorId){
+          localStorage.setItem(this.INVESTIGADOR_ID_KEY, user.investigadorId);
         }
       }),
       catchError(this.handleError)
@@ -44,6 +46,17 @@ export class AuthService {
       console.log(result); // Añade este console.log para verificar el valor
       return result;
     }
+       // Método para obtener el token y el ID del investigador
+       getTokenAndInvestigadorId(): { token: string, id: string } {
+        const investigadorId = localStorage.getItem(this.INVESTIGADOR_ID_KEY);
+        // Ajusta esto según la estructura real de tu usuario y la lógica de autenticación
+        const result = {
+          token: this.user?.token || '',
+          id: investigadorId || ''
+        };
+        console.log(result); // Añade este console.log para verificar el valor
+        return result;
+      }
     
 
   private handleError(error: HttpErrorResponse) {

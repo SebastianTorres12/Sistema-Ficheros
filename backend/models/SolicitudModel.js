@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const solicitudSchema = new mongoose.Schema(
   {
-    
+
     titulo_proyecto: {
       type: String,
       required: [true, "Complete este campo"]
@@ -34,10 +34,8 @@ const solicitudSchema = new mongoose.Schema(
     },
     participantes: [
       {
-        investigador_id: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Investigador" // Referencia a la colección Investigador
-        }
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Investigador" // Referencia a la colección Investigador
       }
     ]
   },

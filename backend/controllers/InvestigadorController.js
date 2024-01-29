@@ -94,7 +94,7 @@ export const loginInvestigador = async (req, res) => {
     }
 
     console.log('Investigador actualizado en la base de datos:', updatedInvestigador);
-    res.status(200).json({ token });
+    res.status(200).json({ token,investigadorId: investigador._id  });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
