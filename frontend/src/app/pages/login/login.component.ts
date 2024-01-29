@@ -29,7 +29,7 @@ export class LoginComponent {
     this.authService.login(this.nombre, this.password, this.role).subscribe(
       (response) => {
         if (this.role === 'investigadores') {
-          this.router.navigate(['/principal']);
+          this.router.navigate(['/dash-investigador']);
         } else if (this.role === 'organismos') {
           this.router.navigate(['/dash-organismo']);
         } else if (this.role === 'super-admin') {

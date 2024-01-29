@@ -37,6 +37,8 @@ import { PrincipalComponent } from './pages/principal/principal.component';
 import { LoginComponent } from './pages/login/login.component';
 //RUTA PARA DASHBOARD ORGANISMOS
 import { DashboardOrganismoComponent } from './pages/dashboard-organismo/dashboard-organismo.component';
+//RUTA PARA DASHBOARD INVESTIGADORES
+import { DashboardInvestigadorComponent } from './pages/dashboard-investigador/dashboard-investigador.component';
 
 export const routes: Routes = [
     //Login
@@ -52,34 +54,36 @@ export const routes: Routes = [
     { path: 'showConvocatoria', component: ShowConvocatoriaComponent },
     { path: 'createConvocatoria', component: CreateConvocatoriaComponent },
     { path: 'updateConvocatoria/:id', component: EditConvocatoriaComponent },
-    
+
     //CRUD SOLICITUD
-    { path: 'showSolicitud', component: ShowSolicitudComponent  },
-    { path: 'createSolicitud', component:  CreateSolicitudComponent },
-    { path: 'updateSolicitud/:id', component:  EditSolicitudComponent },
+    { path: 'showSolicitud', component: ShowSolicitudComponent },
+    { path: 'createSolicitud', component: CreateSolicitudComponent },
+    { path: 'updateSolicitud/:id', component: EditSolicitudComponent },
 
     //CRUD INVESTIGADOR
-    { path: 'showInvestigador', component: ShowInvestigadorComponent  },
-    { path: 'createInvestigador', component:  CreateInvestigadorComponent },
-    { path: 'updateInvestigador/:id', component:  EditInvestigadorComponent },
+    { path: 'showInvestigador', component: ShowInvestigadorComponent },
+    { path: 'createInvestigador', component: CreateInvestigadorComponent },
+    { path: 'updateInvestigador/:id', component: EditInvestigadorComponent },
     //CRUD GRUPO INVESTIGACION
-    { path: 'showGruposInvestigacion', component: ShowGrupoInvestigacionComponent  },
-    { path: 'createGrupoInvestigacion', component: CreateGrupoInvestigacionComponent  },
-    { path: 'updateGrupoInvestigacion/:id', component:  EditGrupoInvestigacionComponent },
+    { path: 'showGruposInvestigacion', component: ShowGrupoInvestigacionComponent },
+    { path: 'createGrupoInvestigacion', component: CreateGrupoInvestigacionComponent },
+    { path: 'updateGrupoInvestigacion/:id', component: EditGrupoInvestigacionComponent },
 
     //CRUD DEPARTAMENTO
-    { path: 'showDepartamentos', component: ShowDepartamentoComponent  },
-    { path: 'createDepartamento', component: CreateDepartamentoComponent  },
+    { path: 'showDepartamentos', component: ShowDepartamentoComponent },
+    { path: 'createDepartamento', component: CreateDepartamentoComponent },
     { path: 'updateDepartamento/:id', component: EditDepartamentoComponent },
-   
+
     //CRUD AREA
-    { path: 'showAreas', component: ShowAreaComponent  },
+    { path: 'showAreas', component: ShowAreaComponent },
     { path: 'createArea', component: CreateAreaComponent },
-    { path: 'updateArea/:id', component:     EditAreaComponent },
-    
+    { path: 'updateArea/:id', component: EditAreaComponent },
+
     //DASHBOARD ORGANISMOS
     { path: 'dash-organismo', component: DashboardOrganismoComponent },
-
+    //DASHBOARD INVESTIGADORES
+    { path: 'dash-investigador', component: DashboardInvestigadorComponent },
+    
     { path: '**', redirectTo: 'show' }
 ];
 

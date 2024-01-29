@@ -20,7 +20,6 @@ import { CreateConvocatoriaDialogComponent } from '../../components/create-convo
 export class DashboardOrganismoComponent implements OnInit {
   convocatorias: Convocatoria[] = [];
   organismoId: string = '';
-
   solicitudesCompletas: Solicitud[] = [];
 
   constructor(
@@ -38,8 +37,7 @@ export class DashboardOrganismoComponent implements OnInit {
 
     // Asigna el ID del organismo
     this.organismoId = id;
-    console.log(this.organismoId);
-    // Obtén las convocatorias por organismo utilizando el servicio de organismo
+
     if (this.organismoId) {
       // Incluye el token en las solicitudes para autenticación
       this.crudOrganismoService.getConvocatoriasByOrganismo(this.organismoId).subscribe(
