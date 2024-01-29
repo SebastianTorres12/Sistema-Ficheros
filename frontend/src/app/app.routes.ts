@@ -39,7 +39,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { DashboardOrganismoComponent } from './pages/dashboard-organismo/dashboard-organismo.component';
 //RUTA PARA DASHBOARD INVESTIGADORES
 import { DashboardInvestigadorComponent } from './pages/dashboard-investigador/dashboard-investigador.component';
-
+//SOLICITUD INVESTIGADOR
+import { SolicitudInvestigadorComponent } from './pages/solicitud-investigador/solicitud-investigador.component';
 export const routes: Routes = [
     //Login
     { path: '', component: LoginComponent },
@@ -83,6 +84,8 @@ export const routes: Routes = [
     { path: 'dash-organismo', component: DashboardOrganismoComponent },
     //DASHBOARD INVESTIGADORES
     { path: 'dash-investigador', component: DashboardInvestigadorComponent },
+    //DASHBOARD INVESTIGADORES
+    { path: 'solicitud-investigador', component: SolicitudInvestigadorComponent },
     
     { path: '**', redirectTo: 'show' }
 ];

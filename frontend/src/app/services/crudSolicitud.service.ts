@@ -9,6 +9,7 @@ import { Solicitud } from '../models/solicitud.model';
 })
 export class CrudSolicitudService {
   private REST_API: string = 'http://localhost:8000/api/solicitudes/';
+  private INVESTIGADOR_API: string = 'http://localhost:8000/api/solicitudes/investigador';
   httpHeaders = new HttpHeaders().set('Content-type', 'application/json');
 
   constructor(private httpClient: HttpClient) {}
@@ -31,6 +32,17 @@ export class CrudSolicitudService {
       catchError(this.handleError)
     );
   }
+
+
+   getSolicitudesByInvestigadorId(investigadorId: string): Observable<Solicitud[]> {
+    return this.httpClient.get(`${this.INVESTIGADOR_API}/${investigadorId}`, { headers: this.httpHeaders }).pipe(
+      map((res: any) => {
+        return res || [];
+      }),
+      catchError(this.handleError)
+    );
+  }
+
   getSolicitudesByIds(ids: string[]): Observable<Solicitud[]> {
     const observables: Observable<Solicitud>[] = ids.map(id => this.getSolicitud(id));
     return forkJoin(observables);

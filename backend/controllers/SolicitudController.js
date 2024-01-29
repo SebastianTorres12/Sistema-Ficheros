@@ -23,6 +23,16 @@ export const getSolicitud = async (req, res) => {
   }
 };
 
+export const getSolicitudesInvestigador = async (req, res) => {
+  try {
+    const investigadorId = req.params.investigadorId;
+    const solicitudes = await SolicitudModel.find({ participantes: investigadorId });
+    res.status(200).json(solicitudes);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 export const createSolicitud = async (req, res) => {
   try {
     const solicitud = await SolicitudModel.create(req.body);
