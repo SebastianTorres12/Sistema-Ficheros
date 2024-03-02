@@ -56,7 +56,7 @@ export class DashboardInvestigadorComponent implements OnInit {
 
   realizarSolicitud(convocatoria: Convocatoria): void {
     const dialogRef = this.dialog.open(CreateSolicitudDialogComponent, {
-      width: '60%', // Ajusta el tamaño según tus necesidades
+      width: '40%', // Ajusta el tamaño según tus necesidades
       data: { convocatoriaId: convocatoria._id }
     });
     dialogRef.afterClosed().subscribe(result => {

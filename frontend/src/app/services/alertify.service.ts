@@ -27,7 +27,7 @@ export class AlertifyService {
     alertify.confirm(message, function(e:any){
       if(e){
         callback_delete();
-        alertify.success("Tarea removida exitosamente.")
+        alertify.success("Eliminación exitosa.")
       }
     })
   }
